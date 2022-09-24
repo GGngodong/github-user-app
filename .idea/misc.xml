@@ -9,6 +9,11 @@
         <entry key="..\:/Users/zidan/StudioProjects/GithubUserApp/app/src/main/res/layout/fragment_detailed_git_u_ser.xml" value="0.13269927536231885" />
         <entry key="..\:/Users/zidan/StudioProjects/GithubUserApp/app/src/main/res/layout/fragment_detailed_user_git.xml" value="0.13269927536231885" />
         <entry key="..\:/Users/zidan/StudioProjects/GithubUserApp/app/src/main/res/layout/git_user_row.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_detail_users.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1757852077001013" />
+        <entry key="app/src/main/res/layout/fragment_follow.xml" value="0.1752786220871327" />
+        <entry key="app/src/main/res/layout/list_user.xml" value="0.1752786220871327" />
+        <entry key="app/src/main/res/layout/shimmer_item.xml" value="0.1752786220871327" />
       </map>
     </option>
   </component>
