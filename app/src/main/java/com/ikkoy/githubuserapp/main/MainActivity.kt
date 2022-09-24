@@ -1,4 +1,4 @@
-package com.ikkoy.githubuserapp
+package com.ikkoy.githubuserapp.main
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,12 +8,15 @@ import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ikkoy.githubuserapp.data.UserResponse
+import com.ikkoy.githubuserapp.GitUserAdapter
+import com.ikkoy.githubuserapp.R
 import com.ikkoy.githubuserapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var rvUser: RecyclerView
-    private val list = ArrayList<GitUser>()
+    private val list = ArrayList<UserResponse>()
     private lateinit var binding: ActivityMainBinding
 
 
@@ -33,7 +36,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private val listUser: ArrayList<GitUser> @SuppressLint("Recycle")
+    private val listUser: ArrayList<UserResponse> @SuppressLint("Recycle")
     get(){
         val dataRealName = resources.getStringArray(R.array.realname)
         val dataUserName = resources.getStringArray(R.array.username)
@@ -45,9 +48,9 @@ class MainActivity : AppCompatActivity() {
         val dataRepository = resources.getStringArray(R.array.repository)
 
 
-        val listUsers = ArrayList<GitUser>()
+        val listUsers = ArrayList<UserResponse>()
         for (i in dataRealName.indices){
-            val usergit = GitUser(
+            val usergit = UserResponse(
                 dataRealName[i],
                 dataUserName[i],
                 dataFollower[i],
@@ -73,9 +76,9 @@ class MainActivity : AppCompatActivity() {
         rvUser.adapter = gitUserAdapter
 
         gitUserAdapter.setOnItemClickCallback(object : GitUserAdapter.OnItemClickCallback {
-            override fun onItemClicked(data: GitUser) {
-                val intentToDetailed = Intent(this@MainActivity,DetailedUserGit::class.java)
-                intentToDetailed.putExtra(DetailedUserGit.DETAILED_USER,data)
+            override fun onItemClicked(data: UserResponse) {
+                val intentToDetailed = Intent(this@MainActivity, DetailUsersActivity::class.java)
+                intentToDetailed.putExtra(DetailUsersActivity.DETAILED_USER,data)
                 startActivity(intentToDetailed)
             }
 
