@@ -7,6 +7,8 @@
     <string name="user_follower"> Followers</string>
     <string name="user_following"> Following</string>
     <string name="user_repository"> Repository</string>
+    <string name="username">Username</string>
+    <string name="name">Name</string>
 
     <string-array name="username">
         <item>jamesmcgill</item>
